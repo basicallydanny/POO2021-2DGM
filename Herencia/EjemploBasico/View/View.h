@@ -1,4 +1,5 @@
-//#ifndef MAIN_H
+#ifndef VIEW_H
+#define VIEW_H
 // Guardas
 
 /* Mostrar menua y validar datos de entrada */
@@ -26,4 +27,4 @@ public:
 
     void combinarReferencias();
 };
-//#define FIGURAS_CONTROLLER_H
+#endif
