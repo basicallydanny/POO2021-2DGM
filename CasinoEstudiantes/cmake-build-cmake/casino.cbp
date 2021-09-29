@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/danie/Desktop/JAVE/POO2021-2DGM/CasinoEstudiantes/Model/Caballos.cpp">
+			<Option target="casino"/>
+		</Unit>
+		<Unit filename="C:/Users/danie/Desktop/JAVE/POO2021-2DGM/CasinoEstudiantes/Model/Caballos.h">
+			<Option target="casino"/>
+		</Unit>
 		<Unit filename="C:/Users/danie/Desktop/JAVE/POO2021-2DGM/CasinoEstudiantes/Model/Casino.cpp">
 			<Option target="casino"/>
 		</Unit>

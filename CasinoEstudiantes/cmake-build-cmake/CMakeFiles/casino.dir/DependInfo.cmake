@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "C:/Users/danie/Desktop/JAVE/POO2021-2DGM/CasinoEstudiantes/Model/Caballos.cpp" "C:/Users/danie/Desktop/JAVE/POO2021-2DGM/CasinoEstudiantes/cmake-build-cmake/CMakeFiles/casino.dir/Model/Caballos.cpp.obj"
   "C:/Users/danie/Desktop/JAVE/POO2021-2DGM/CasinoEstudiantes/Model/Casino.cpp" "C:/Users/danie/Desktop/JAVE/POO2021-2DGM/CasinoEstudiantes/cmake-build-cmake/CMakeFiles/casino.dir/Model/Casino.cpp.obj"
   "C:/Users/danie/Desktop/JAVE/POO2021-2DGM/CasinoEstudiantes/Model/DosColores.cpp" "C:/Users/danie/Desktop/JAVE/POO2021-2DGM/CasinoEstudiantes/cmake-build-cmake/CMakeFiles/casino.dir/Model/DosColores.cpp.obj"
   "C:/Users/danie/Desktop/JAVE/POO2021-2DGM/CasinoEstudiantes/Model/Juego.cpp" "C:/Users/danie/Desktop/JAVE/POO2021-2DGM/CasinoEstudiantes/cmake-build-cmake/CMakeFiles/casino.dir/Model/Juego.cpp.obj"

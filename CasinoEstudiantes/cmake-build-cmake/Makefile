@@ -128,6 +128,30 @@ casino/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/build
 .PHONY : casino/fast
 
+Model/Caballos.obj: Model/Caballos.cpp.obj
+.PHONY : Model/Caballos.obj
+
+# target to build an object file
+Model/Caballos.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/Caballos.cpp.obj
+.PHONY : Model/Caballos.cpp.obj
+
+Model/Caballos.i: Model/Caballos.cpp.i
+.PHONY : Model/Caballos.i
+
+# target to preprocess a source file
+Model/Caballos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/Caballos.cpp.i
+.PHONY : Model/Caballos.cpp.i
+
+Model/Caballos.s: Model/Caballos.cpp.s
+.PHONY : Model/Caballos.s
+
+# target to generate assembly for a file
+Model/Caballos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\casino.dir\build.make CMakeFiles/casino.dir/Model/Caballos.cpp.s
+.PHONY : Model/Caballos.cpp.s
+
 Model/Casino.obj: Model/Casino.cpp.obj
 .PHONY : Model/Casino.obj
 
@@ -305,6 +329,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... casino
+	@echo ... Model/Caballos.obj
+	@echo ... Model/Caballos.i
+	@echo ... Model/Caballos.s
 	@echo ... Model/Casino.obj
 	@echo ... Model/Casino.i
 	@echo ... Model/Casino.s

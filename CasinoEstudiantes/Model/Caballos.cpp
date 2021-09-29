@@ -28,22 +28,20 @@ float CarreraCaballos::jugar(float gonzosApostar){
         case 5:
             caballoJugador = cVerde; break;
     }
-
     bool ganadorCasino = (rand() % 100) < caballoJugador;
+    gonzosResultado = calcularResultado(gonzosApostar);
+    return gonzosResultado;
+}
 
-    if( ganadorCasino == true ){
-        cout << "Su caballo ha ganado ." << endl;
-        gonzosResultado = calcularResultado(gonzosApostar, caballoJugador);
-        return gonzosResultado;
-    } else {
+float CarreraCaballos::calcularResultado(float gonzosApostar) {
+    if( ganadorCasino == false ){
         cout << "Su caballo ha perdido." << endl;
-        gonzosResultado = 0;
-        return gonzosResultado;
+        return 0;
+    } else {
+        cout << "Su caballo ha ganado ." << endl;
+        return caballoJugador * gonzosApostar;
     }
 }
 
-float coloresCaballos::calcularResultado(float gonzosApostar, int apuesta) {
-    return apuesta * gonzosApostar;
+CarreraCaballos::~CarreraCaballos() {
 }
-
-CarreraCaballos::~CarreraCaballos() noexcept {}{

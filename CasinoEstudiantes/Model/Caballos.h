@@ -6,13 +6,14 @@
 #include<ctime>
 
 class CarreraCaballos:public Juego {
+private:
+    bool ganadorCasino;
 protected:
     int caballoJugador;
-    int cMorado, cVerde, cAmarillo, cAzul, cRojo;
     float calcularResultado(float gonzosApostar) override;
 
 public:
-    float jugar(float gonzosApostar, int apuesta) override;
+    float jugar(float gonzosApostar) override;
         virtual ~CarreraCaballos();
 };
 

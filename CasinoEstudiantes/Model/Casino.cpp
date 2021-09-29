@@ -9,24 +9,19 @@ Casino::Casino() {
     cout << "Inicialice casino";
     // Inicia un jugador en el mapa para comenzar
     jugadoresMap.insert({1,new Jugador(1,"Pedro rodriguez", 500)});
-
     // Inicia  los juegos disponibles y los agrega al mapa de juegos
     Mayor13 * juego1 = new Mayor13();
     juegosDisponibles.push_back(juego1);
     DosColores * juego2 = new DosColores();
     juegosDisponibles.push_back(juego2);
-    CarreraCaballos * juego3 = new CarreraCaballos(); // !! DUDA
+    CarreraCaballos * juego3 = new CarreraCaballos();
     juegosDisponibles.push_back(juego3);
 }
 
 void Casino::agregarJugador(long id, string nombreJugador, double dinero) {
-
     float cantGonzos = convertirPesosAGonzos(dinero);
     Jugador * pJugador = new Jugador (id, nombreJugador, cantGonzos);
-
-    /*jugadoresMap.insert({pJugador->getId(), pJugador});*/
-
-
+    jugadoresMap.insert({pJugador->getId(), pJugador});
 }
 
 bool Casino::jugar(int idJuego, long idJugador, float gonzosApostar) {
@@ -42,9 +37,14 @@ bool Casino::jugar(int idJuego, long idJugador, float gonzosApostar) {
     if (verPuedeContinuar(idJugador, gonzosApostar)== false){
         throw std::domain_error("No tienes saldo suficiente para jugar\n");
     }
-    throw std::logic_error("Metodo incompleto");
-    // Retorna verdadero si el jugador ganó y false si el jugador perdio
-    return false;
+
+    int posJuego = idJuego -1;
+    Juego * pJuegoAJugar = juegosDisponibles.at(idJuego-1);
+    Jugador * pJugador = jugadoresMap[idJugador];
+    float gonzosGanados = pJuegoAJugar->jugar(gonzosApostar) - gonzosApostar;
+    pJugador->actualizarGonzos(gonzosGanados);
+    pJugador->aumentarJuegos();
+    return(gonzosGanados >= 0);
 }
 
 void Casino::verInfoJugador(long idJugador){
@@ -53,13 +53,11 @@ void Casino::verInfoJugador(long idJugador){
 
 bool Casino::verPuedeContinuar(int idJugador, float gonzosApostar) {
     Jugador * pJugador = jugadoresMap[idJugador];
-    pJugador
-
+    throw std::logic_error("Metodo por implementar");
 }
 
 void Casino::retirarJugador(long idJugador) {
     throw std::logic_error("Metodo por implementar");
-
 }
 
 void Casino::recargarGonzos(long idJugador) {
@@ -78,7 +76,6 @@ void Casino::recargarGonzos(long idJugador) {
 }
 
 bool Casino::verExisteJugador(long id) {
-
     throw std::logic_error("Metodo por implementar");
 }
 
@@ -96,8 +93,7 @@ Casino::~Casino() {
         delete jugadorTemp;
     }
 
-    for(int i=0; i< juegosDisponibles.size(); i++)
-    {
+    for(int i=0; i< juegosDisponibles.size(); i++){
         Juego * juegoTemp = juegosDisponibles.at(i);
         delete juegoTemp;
     }

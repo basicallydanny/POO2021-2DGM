@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/casino.dir/Model/Caballos.cpp.obj"
   "CMakeFiles/casino.dir/Model/Casino.cpp.obj"
   "CMakeFiles/casino.dir/Model/DosColores.cpp.obj"
   "CMakeFiles/casino.dir/Model/Juego.cpp.obj"
