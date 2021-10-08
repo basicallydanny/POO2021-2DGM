@@ -6,8 +6,11 @@
 #include <vector>
 
 #include "Propietario.h"
+#include "Fundador.h"
+#include "Reventa.h"
 
 using namespace std;
+using std::cout;
 using std::vector;
 
 class Administracion{
@@ -16,8 +19,9 @@ private:
     vector <Propietario> propietarios;
 
 public:
+    Administracion();
     void recaudarAdministracion();
     void mostrarBeneficios();
 };
 
-#endif ADMINISTRACION_H
+#endif //ADMINISTRACION_H

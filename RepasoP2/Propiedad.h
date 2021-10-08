@@ -11,7 +11,10 @@ private:
     bool tieneParqueadero;
 
 public:
+    Propiedad();
+    Propiedad(int piso, int numero, float area, bool parking);
+    int getPiso();
     float calcularAdministracion( float valorBaseAdmin );
 };
 
-#endif PROPIEDAD_H
+#endif //PROPIEDAD_H

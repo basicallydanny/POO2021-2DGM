@@ -6,11 +6,13 @@
 class Fundador : public Propietario {
 private:
     float descuentoTienda;
-    bool gratisSalonSolial;
+    bool gratisSalonSocial;
     
 public:
+    Fundador();
+    Fundador(string n, string id, Propiedad p);
+    virtual ~Fundador();
     virtual void mostrarBeneficios() override;
-
 };
 
-#endif FUNDADOR_H
+#endif //FUNDADOR_H
